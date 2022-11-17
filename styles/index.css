@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    height: 100px;
+    width: 100vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4.5em;
+    overflow: hidden;
+    transition: 0.2s transform;
+}
+
+header p{
+    overflow: hidden;
+}
+
+header:hover{
+    transform: scale(1.1);
+}
+
+body{
+    height: 100vh;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+}
+
+.container-centrado{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#animacion-inicio{
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    animation-name: "Historia";
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    opacity: 0%;
+}
+
+@keyframes Historia { 
+    0%{
+        opacity: 100%;
+    }
+    25%{
+        opacity: 75%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    75%{
+        opacity: 25%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
+.flecha{
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    background-color: rgb(30, 168, 134);
+    right: 0;
+    transition: 0.5s transform;
+}
+
+.flecha:hover{
+    transform: scale(1.1);
+}
+
+.epoca-actual{
+    width: 600px;
+    height: 400px;
+    background: rgba(36, 48, 63, 0.6549019608);
+    backdrop-filter: blur(8px);
+    box-shadow: 20px 20px 100px #000;
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    transition: all ease 2s 0ms;  
+}
+
+.epoca-actual:hover{
+    top: 40%;
+    box-shadow: 10px 10px 10px #000;
+}
+
+#imagen-articulo{
+    align-self: center;
+}
+
+.title{
+    text-align: center;
+    font-family: 'Fredoka One';
+    font-size: 2em;
+}
+
+p{
+    color: #FFF;
+    font-size: 1em;
+}
+
+footer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    background: rgba(36, 48, 63, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 20px 20px 100px #000;
+    border-top: 1px solid #FFF;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1.2em;   
+}
+
+article{
+    border-right: 1px solid #FFF;
+    padding: 20px;
+}
