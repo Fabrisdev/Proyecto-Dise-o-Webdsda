@@ -22,17 +22,14 @@ body{
     background-image: url("../img/fondo-menu.png");
     background-size: cover;
     position: relative;
-}
-
-.centrado{
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
 }
 
 footer{
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,7 +49,7 @@ footer{
 .parte-historia{
     width: 200px;
     height: 200px;
-    background-color: #fff;
+    background-color: #666;
     border: 1px solid #000;
     border-radius: 50%;
 }
@@ -105,3 +102,36 @@ footer{
     }
 }
 
+@media only screen and (max-width: 1400px){
+    .container{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 860px){
+    .container{
+        margin-top: 100px;
+        height: fit-content;
+        border: 0;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    header{
+        font-size: 3.5em;
+    }
+}
+
+@media only screen and (max-width: 432px){
+    .parte-historia{
+        border-radius: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 356px){
+    header{
+        font-size: 3em;
+    }
+}
