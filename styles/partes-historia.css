@@ -21,6 +21,7 @@ header:hover{
 }
 
 body{
+    min-height: 100vh;
     background-image: url("../img/fondo-aprendizaje.png");
     background-size: cover;
     display: flex;
@@ -97,7 +98,7 @@ p{
 }
 
 footer{
-    position: sticky;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -192,10 +193,22 @@ article{
         width: 100%;
         margin-bottom: 0;
     }
+    .atras{
+        display: none;
+    }
+    .atras-sin-animacion{
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 350px){
     header{
         font-size: 2.5em;
+    }
+    .atras{
+        display: none;
+    }
+    .atras-sin-animacion{
+        display: block;
     }
 }

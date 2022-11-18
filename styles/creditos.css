@@ -56,7 +56,7 @@ footer{
 .container-personas{
     display: flex;
     width: 100vw;
-    height: 500px;
+    height: 3500px;
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -110,4 +110,47 @@ footer{
     }
 }
 
+.texto{
+    font-family: sans-serif;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
 
+a{
+    text-decoration: none;
+}
+
+p{
+    color: #fff;
+}
+
+@media only screen and (max-width: 1035px){
+    .persona{
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 1016px){
+    .persona{
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 744px){
+    .container-personas{
+        flex-direction: column;
+        position: absolute;
+        height: 700px;
+        gap: 0;
+    }
+
+    .persona{
+        width: 100%;
+    }
+
+    .persona-primera{
+        margin-top: 400px;
+    }
+
+}
