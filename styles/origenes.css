@@ -1,0 +1,216 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    height: 100px;
+    width: 100vw;
+    font-family: Lobster;
+    font-size: 3.5em;
+    overflow: hidden;
+    transition: 0.2s ease;
+}
+
+
+header:hover{
+    font-size: 3.7em;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url("../img/fondo-aprendizaje.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+}
+
+.container-centrado{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flecha{
+    position: fixed;
+    top: 50vh;
+    padding: 10px;
+    right: 0;
+    transition: 0.5s ease;
+}
+
+.flecha:hover{
+    font-size: 2em;
+    filter: invert();
+}
+
+.flecha-izquierda{
+    position: fixed;
+    top: 50vh;
+    transform: rotate(180deg);
+    padding: 10px;
+    left: 0;
+    transition: 0.5s ease;
+}
+
+.flecha-izquierda:hover{
+    font-size: 2em;
+    filter: invert();
+}
+
+.epoca-actual{
+    width: 1100px;
+    height: auto;
+    background: rgba(36, 48, 63, 0.6549019608);
+    backdrop-filter: blur(8px);
+    box-shadow: 20px 20px 100px #000;
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    transition: box-shadow ease 1s 0ms;
+    margin-bottom: 70px;
+}
+
+.epoca-actual:hover{
+    box-shadow: 10px 10px 10px #000;
+}
+
+#imagen-articulo{
+    margin-left: 10px;
+    align-self: center;
+}
+
+.title{
+    text-align: center;
+    font-family: 'Fredoka One';
+    font-size: 2em;
+}
+
+p{
+    color: #FFF;
+    font-size: 1.4em;
+    text-align: justify;
+}
+
+footer{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    background: rgba(36, 48, 63, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 20px 20px 100px #000;
+    border-top: 1px solid #FFF;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1.2em;   
+    gap: 5px;
+}
+
+article{
+    border-right: 1px solid #FFF;
+    padding: 20px;
+}
+
+.circulo{
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+
+.circulo-actual{
+    background-color: #333;
+}
+
+@media only screen and (max-width: 1318px){
+    .flecha, .flecha-izquierda{
+        display: none;
+    }
+    
+    .circulo{
+        width: 23px;
+        height: 23px;
+    }
+}
+
+.circulos{
+    display: flex;
+    flex-direction: row;
+}
+
+.atras-sin-animacion{
+    filter: invert();
+    display: none;
+}
+
+.atras{
+    position: fixed;
+    filter: invert();
+    left: 0;
+    top: 0;
+    padding: 20px;
+}
+
+.atras:hover{
+    animation-name: "Girar";
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes Girar{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 1150px){
+    .epoca-actual{
+        flex-direction: column;
+        width: 90%;
+    }
+    article{
+        border-right: 0;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .epoca-actual{
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .atras{
+        display: none;
+    }
+    .atras-sin-animacion{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    header{
+        font-size: 2.5em;
+    }
+    .atras{
+        display: none;
+    }
+    .atras-sin-animacion{
+        display: block;
+    }
+}
